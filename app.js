@@ -1,16 +1,22 @@
 $(document).ready(function(){
-    $('.social-links').load("social-links.html");
+	// load navbar and footer
     $('#navbar').load("navbar.html");
     $('#footer').load("footer.html");
 
-    // not working 
-    $('.nav-links li').on( "click", function(){
-        $(this).siblings().removeClass("active");
-        $(this).addClass("active");
-    });
+    // toggle active navbar link. doesn't work yet!
+    var activeLink = function(){
+    	$('.nav-links li').click(function(e){
+    		e.preventDefault();
+    		e.stopPropagation();
+    		$(this).siblings().removeClass('active');
+    		$(this).addClass('active');
+    	});
+    };
+    	
 
+    // toggle info boxes on home page
     $('.arrow-box').hide();
     $('.mission').click(function(){
-    	$('.arrow-box').slideToggle();
+    	$(this).children('.arrow-box').slideToggle();
     });
 });
