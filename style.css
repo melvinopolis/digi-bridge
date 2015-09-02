@@ -1,0 +1,239 @@
+/** {
+	border: 1px solid black;
+}*/
+
+/* GENERAL STYLES */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quattrocento', Georgia, serif;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-default {
+	border-radius: 0;
+	font-family: 'Oswald', sans-serif;
+	border: 3px solid #047fa5;
+	background-color: transparent;
+	color: #047fa5;
+	transition: .5s;
+}
+
+.btn-default:hover {
+	color: #047fa5;
+	border: 3px solid #047fa5;
+	background: rgba(4, 127, 165, .25);
+	transition: .5s;
+}
+
+/* HEADERS */
+.header-home {
+	height: 600px;
+	background: linear-gradient(to bottom right, rgba(0, 85, 120, 0.9), rgba(151, 237, 255, 0.8)),
+				url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');
+	background-attachment: fixed;
+	background-position: center -150px;
+	
+	padding: 15px;
+}
+
+.header h1 {
+	position: absolute;
+	top: 250px;
+	font-size: 6em;
+	color: #fff;
+	padding-left: 30px;
+}
+
+/* NAVBAR */
+nav {
+	font-family: 'Oswald', sans-serif;
+	postition: fixed;
+	top: 0;
+	z-index: 1000;
+	height: 95px;
+}
+
+#navbar .logo {
+	padding-left: 30px;
+	margin-top: 15px;
+	height: 60px;
+}
+
+.social-links, .nav-links {
+	padding: 0 30px 0 0;
+	list-style: none;
+	float: right;
+	clear: right;
+}
+
+.social-links li, .nav-links li {
+	display: inline-block;
+}
+
+.nav-links li {
+	padding: 5px 20px;
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+
+.nav-links li.active {
+	border-bottom: 4px solid #FFE76B;
+}
+
+.nav-links a {
+	color: #fff;
+	text-decoration: none;	
+}
+
+.nav-links a:hover {
+	color: #FFE76B;
+	text-decoration: none;
+}
+
+.social-links svg {
+	fill: #fff;
+	height: 20px;
+}
+
+.social-links svg:hover {
+	fill: #FFE76B;
+}
+
+/* NAV - DONATE BUTTON */
+nav li.donate {
+	transition: .5s;
+	height: 40px;
+	width: 70px;
+	padding: 5px 0;
+	border: 3px solid #FFE76B;
+	background: transparent;
+	text-align: center;
+}
+
+nav li.donate a {
+	transition: .5s;
+	color: #FFE76B;
+}
+
+nav li.donate:hover {
+	transition: .5s;
+	background: rgba(255, 231, 107, .5);
+}
+
+nav li.donate:hover a {
+	transition: .5s;
+	color: #fff;
+}
+
+/* HOME PAGE */
+.slogan {
+	background-color: #047fa5;
+	width: 100%;
+	height: 200px;
+	margin-top: -30px;
+	color: #fff;
+	text-align: center;
+}
+
+.slogan img {
+	padding-top: 20px;
+	height: 125px;
+	margin: 0 auto;
+}
+
+.home-content {
+	padding: 30px 0;
+	color: #047fa5;
+	text-align: center;
+}
+
+.home-content img {
+	max-height: 125px;
+}
+
+.home-content h4 {
+	margin-bottom: 30px;
+}
+
+.home-content h4:hover {
+	font-weight: 700;
+	cursor: 
+}
+
+.arrow-box {
+	padding: 15px;
+	position: relative;
+	background: rgba(255, 231, 107, .075);
+	border: 6px solid #FFE76B;
+}
+.arrow-box:after, .arrow-box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow-box:after {
+	border-color: rgba(255, 231, 107, 0);
+	border-bottom-color: #FFE76B;
+	border-width: 25px;
+	margin-left: -25px;
+}
+.arrow-box:before {
+	border-color: rgba(255, 231, 107, 0);
+	border-bottom-color: #FFE76B;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+/* FOOTER */
+
+footer {
+	height: 90px;
+	width: 100%;
+	background: #666;
+}
+
+footer p {
+	color: #fff;
+	float: left;
+	text-transform: lowercase;
+	padding-left: 30px;
+}
+
+footer .social-links, footer p {
+	padding-top: 30px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+	.nav-links {
+		float: none;
+		display: block;
+		/*width: 100%;*/
+	}
+	nav .logo {
+		display: block;
+	}
+}
+
+@media (max-width: 750px) {
+	nav .social-links {
+		display: none;
+	}
+
+	nav .logo, nav .nav-links {
+		margin: 15px auto;
+		padding: 0;
+	}
+}
+
