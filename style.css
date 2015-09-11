@@ -43,19 +43,21 @@ h1 {
 
 /* HEADERS */
 .header {
-	background-attachment: fixed;
-	background-position: center -150px;
 	padding: 15px;
 }
 .header-home {
 	height: 500px;
 	background: linear-gradient(to bottom, rgba(151, 237, 255, 0.85), rgba(21, 185, 217, 1)),
-				url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');	
+				url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');
+	background-attachment: fixed;
+	background-position: center -150px;	
 }
 .header-other {
 	height: 300px;
 	background: linear-gradient(to bottom right, rgba(151, 237, 255, 0.85), rgba(21, 185, 217, 1)),
 				url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');
+	background-attachment: fixed;
+	background-position: center -150px;
 }
 
 .header h1 {
