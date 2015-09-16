@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	// load navbar and footer
-    $('head').load('head.html')
     $('#navbar').load("navbar.html");
     $('#footer').load("footer.html");
 
