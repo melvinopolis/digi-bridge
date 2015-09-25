@@ -388,9 +388,11 @@ li.donate:hover a {
 	color: #15b9d9;
 }
 
-.form-group:not(:last-child){
+.form-group {
 	margin-bottom: 25px;
 }
+
+form .submit {}
 
 /* FOOTER */
 footer {
