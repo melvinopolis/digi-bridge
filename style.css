@@ -1,5 +1,6 @@
 /************
 COLORS:
+	lightblue-header: rgba(191, 243, 255, 0.85);
 	lightblue: #15b9d9 or rgb(21, 185, 217)
 	yellow: #ede814 or rgb(237, 232, 20)
 ************/
@@ -49,17 +50,48 @@ h1, h2 {
 }
 .header-home {
 	height: 500px;
-	background: linear-gradient(to bottom, rgba(151, 237, 255, 0.85), rgba(21, 185, 217, 1)),
-				url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');
+	background: linear-gradient(to bottom, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1) 80%),
+				url('img/headers/header-home.jpg');
 	background-attachment: fixed;
-	background-position: center -150px;	
+	background-position: center -100px;	
+	background-size: cover;
 }
+
+.header-about {
+	background: linear-gradient(to bottom right, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1)),
+				url('img/headers/header-about.jpg');
+	background-position: center -150px;
+}
+
+.header-involved {
+	background: linear-gradient(to bottom right, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1)),
+				url('img/headers/header-involved.jpg');
+	background-position: center -200px;
+}
+
+.header-courses {
+	background: linear-gradient(to bottom right, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1)),
+				url('img/headers/header-courses.jpg');
+	background-position: center -250px;
+}
+
+.header-blog {
+	background: linear-gradient(to bottom right, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1)),
+				url('img/headers/header-blog.jpg');
+	background-position: center -150px;
+}
+
+.header-contact {
+	background: linear-gradient(to bottom right, rgba(191, 243, 255, 0.85), rgba(21, 185, 217, 1)),
+				url('img/headers/header-contact.jpg');
+	background-position: center -275px;
+}
+
 .header-other {
 	height: 300px;
-	background: linear-gradient(to bottom right, rgba(151, 237, 255, 0.85), rgba(21, 185, 217, 1));
-				/*url('https://farm8.staticflickr.com/7378/8720604364_208d056aba_h.jpg');*/
+	background: ;
 	background-attachment: fixed;
-	background-position: center -150px;
+	background-size: cover;
 }
 
 .header h1 {
@@ -144,32 +176,36 @@ li.donate {
 	margin-top: -5px;
 	padding: 10px;
 	border: 3px solid #ede814;
-	background: rgba(237, 232, 20, .6);
+	/*border: 3px solid #15b9d9;*/
+	/*background: rgba(237, 232, 20, .6);*/
+	/*background-color: transparent;*/
+	background: rgba(21, 185, 217, .5);
 	text-align: center;
 	border-radius: 0;
 }
 
 li.donate a {
 	transition: .5s;
-	color: #15b9d9;
+	color: #fff;
 }
 
 li.donate:hover {
 	transition: .5s;
-	background: rgba(237, 232, 20, .4);
+	/*background: rgba(237, 232, 20, .4);*/
 }
 
 li.donate:hover a {
 	transition: .5s;
-	color: #15b9d9;
+	/*color: #15b9d9;*/
+	color: #ede814;
 }
 
 /* HOME PAGE */
 .slogan {
 	background-color: #15b9d9;
 	width: 100%;
-	height: 200px;
-	margin-top: 0px;
+	margin-top: 0;
+	padding: 30px;
 	color: #fff;
 	text-align: center;
 }
@@ -236,6 +272,10 @@ li.donate:hover a {
 }
 
 /* ABOUT PAGE */
+.slogan p:first-child {
+	padding-top: 0;
+}
+
 .slogan p {
 	width: 60%;
 	margin: 0 auto;
@@ -243,10 +283,10 @@ li.donate:hover a {
 	line-height: 1.5em;
 	font-size: 1.1em;
 }
-.bios {
+.team {
 	margin-top: 35px;
 }
-.bios h2, .partners h2 {
+.team h2, .partners h2 {
 	font-size: 4em;
 	letter-spacing: 4px;
 	font-weight: 300;
@@ -257,21 +297,44 @@ li.donate:hover a {
 	margin: 20px auto;
 	padding-bottom: 10px;
 }
-
-.bios h3 {
-	color: #15b9d9;
-	font-family: 'Oswald', sans-serif;
-	margin-top: 5px;
+.bio {
+	padding: 0;
+	float: left;
 }
 
-.bios img {
-	border: 6px solid #ede814;
-	margin: 10px 0;
+.bio:nth-child(3n+5) {
+	clear: left;
 }
 
-.bios p {
-	width: 60%;
+.bio .headshot {
+	width: 100%;
+	height: 250px;
+	background: url(http://placehold.it/250x250);
+	background-size: cover;
+	background-position: center;
+	opacity: .5;
 }
+
+.bio .headshot:hover {
+	opacity: 1;
+}
+
+.bio h3 {
+	background-color: #15b9d9;
+	color: #fff;
+	width: 100%;
+	margin: 0;
+	padding: 8px;
+	border: 4px solid #ede814;
+	border-top: none;
+	/*border-bottom: none;*/
+}
+
+.bio p {
+	text-align: justify;
+	padding: 10px;
+}
+
 
 .partners {
 	clear: both;
@@ -391,8 +454,6 @@ li.donate:hover a {
 .form-group {
 	margin-bottom: 25px;
 }
-
-form .submit {}
 
 /* FOOTER */
 footer {

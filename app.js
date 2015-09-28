@@ -19,4 +19,12 @@ $(document).ready(function(){
     $('.mission').click(function(){
     	$(this).children('.arrow-box').slideToggle();
     });
+
+    // toggle bios on about page
+    $('.bio p').hide();
+    $('.bio h3').hide();
+    $('.bio .headshot').click(function(){
+        $(this).siblings('p').slideToggle();
+        $(this).siblings('h3').slideToggle();
+    });
 });
